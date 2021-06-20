@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="container mt-4 pt-4">
+        <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;">Select Course for Apply Jobs</h2>
+
+        <div class="row mt-4">
+            {% for course in courses %}
+            <div class="col-lg-3 mt-4" style="font-family: 'Times New Roman', Times, serif;">
+                <a href="/{{course.id}}" class="btn btn-primary">{{course.course_name}}</a>
+                        </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+   {% endblock %}

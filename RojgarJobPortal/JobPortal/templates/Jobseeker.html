@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static%}
+{% load static %}
+{% block content %}
+
+<div class="container card" >
+    <h1 style="font-family: 'Times New Roman', Times, serif;font-weight: bold; text-align: center; text-shadow: 0 0 3px cyan, 0 0 5px #0000FF;
+    ">Available openings featured jobs</h1>
+    <div class="card-body">
+       
+        <table class="table table-hover " style="font-size: 15px;font-family: 'Times New Roman', Times, serif;">
+           
+            <tr >
+                <th >Name</th>
+                <th>Position</th>
+                <th>Description</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Location</th>
+                <th>Join</th>
+            </tr>
+            {% for c in companies %}
+                <tr style="font-weight: bold;">
+                    <td>{{c.name}}</td>
+                    <td>{{c.position}}</td>
+                    <td>{{c.description}}</td>
+                    <td>{{c.salary}}</td>
+                    <td>{{c.experience}}</td>
+                    <td>{{c.Location}}</td>
+                    <td><a href="{% url 'home' %}" class="btn btn-info btn-sm" type="submit">Apply</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% for c in companies %}
+        
+        {% endfor %}
+    </div>
+</div>
+        {% for c in companies %}
+            {{c.name}}
+        {% endfor %}
+{% endblock %}
